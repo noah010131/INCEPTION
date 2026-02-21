@@ -17,14 +17,23 @@ if [ ! -d "/var/lib/mysql/${MYSQL_DATABASE}" ]; then
     fi
 
     cat << EOF > $tfile
+-- tfile 내부 SQL 수정 제안
 USE mysql;
 FLUSH PRIVILEGES;
--- root 인증 방식을 비밀번호 기반으로 고정
+
+-- 1. root 계정 보안 설정 (localhost 접속만 허용 및 비번 설정)
 ALTER USER 'root'@'localhost' IDENTIFIED BY '${MYSQL_ROOT_PASSWORD}';
--- 일반 유저 생성 및 권한 부여
-CREATE DATABASE IF NOT EXISTS ${MYSQL_DATABASE};
-CREATE USER IF NOT EXISTS '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
-GRANT ALL PRIVILEGES ON ${MYSQL_DATABASE}.* TO '${MYSQL_USER}'@'%';
+
+-- 2. 원격 root 접속 가능성 완전 차단 (Host가 localhost가 아닌 root 삭제)
+DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');
+
+-- 3. 익명 사용자(Anonymous User) 제거 (보안 필수)
+DELETE FROM mysql.user WHERE User='';
+
+-- 4. 테스트 데이터베이스 제거
+DROP DATABASE IF EXISTS test;
+DELETE FROM mysql.db WHERE Db='test' OR Db='test\_%';
+
 FLUSH PRIVILEGES;
 EOF
 

@@ -16,6 +16,9 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -out /etc/nginx/ssl/chanypar.crt \
     -subj "/C=FR/ST=Paris/L=Paris/O=42/OU=42Paris/CN=chanypar.42.fr"
 
+RUN apt-get update && apt-get install -y nginx openssl iputils-ping && rm -rf /var/lib/apt/lists/*
+# ... 나머지 설정
+
 # 4. 설정 파일 복사 (우리가 만들 nginx.conf를 컨테이너 안으로)
 COPY conf/nginx.conf /etc/nginx/conf.d/default.conf
 
