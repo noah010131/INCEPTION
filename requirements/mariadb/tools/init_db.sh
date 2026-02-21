@@ -34,5 +34,7 @@ EOF
     echo "MariaDB initialization completed."
 fi
 
-# 반드시 외부 접속 허용 옵션 추가
-exec mysqld_safe --bind-address=0.0.0.0
+# AS-IS
+# exec mysqld_safe --bind-address=0.0.0.0
+
+exec mysqld --user=mysql --bind-address=0.0.0.0

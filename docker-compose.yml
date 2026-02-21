@@ -8,7 +8,7 @@ services:
     env_file:
       - .env
     volumes:
-      - mariadb_data:/var/lib/mysql
+      - /home/chanypar/data/mariadb:/var/lib/mysql
     networks:
       - inception
 
@@ -17,7 +17,7 @@ services:
     env_file:
       - .env
     volumes:
-      - wp_data:/var/www/html
+      - /home/chanypar/data/wordpress:/var/www/html
     networks:
       - inception
     depends_on:
@@ -30,26 +30,11 @@ services:
     ports:
       - "443:443"
     volumes:
-      - wp_data:/var/www/html # 동일한 볼륨 마운트
+      - /home/chanypar/data/wordpress:/var/www/html
     networks:
       - inception
     depends_on:
       - wordpress
-
-# 만약 과제에서 호스트 경로 지정을 요구한다면 아래 설정을 수정해야 합니다.
-volumes:
-  mariadb_data:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: /home/chanypar/data/mariadb
-  wp_data: # 여기에 추가!
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: /home/chanypar/data/wordpress
 
 networks:
   inception:
