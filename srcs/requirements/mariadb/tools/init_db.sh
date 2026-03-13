@@ -21,18 +21,20 @@ if [ ! -d "/var/lib/mysql/${MYSQL_DATABASE}" ]; then
 USE mysql;
 FLUSH PRIVILEGES;
 
--- 1. root 계정 보안 설정 (localhost 접속만 허용 및 비번 설정)
+-- 1. root 계정 보안 설정
 ALTER USER 'root'@'localhost' IDENTIFIED BY '${MYSQL_ROOT_PASSWORD}';
 
--- 2. 원격 root 접속 가능성 완전 차단 (Host가 localhost가 아닌 root 삭제)
+-- 2. 원격 root 접속 차단
 DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');
 
--- 3. 익명 사용자(Anonymous User) 제거 (보안 필수)
+-- 3. 익명 사용자 및 테스트 DB 제거
 DELETE FROM mysql.user WHERE User='';
-
--- 4. 테스트 데이터베이스 제거
 DROP DATABASE IF EXISTS test;
-DELETE FROM mysql.db WHERE Db='test' OR Db='test\_%';
+
+-- 4. ★필수★ 과제용 일반 유저 및 DB 생성 (이게 빠지면 502 에러 납니다)
+CREATE DATABASE IF NOT EXISTS ${MYSQL_DATABASE};
+CREATE USER IF NOT EXISTS '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
+GRANT ALL PRIVILEGES ON ${MYSQL_DATABASE}.* TO '${MYSQL_USER}'@'%';
 
 FLUSH PRIVILEGES;
 EOF
