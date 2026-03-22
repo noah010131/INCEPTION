@@ -9,15 +9,16 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Campus-Paris-000000?style=for-the-badge&logo=target" />
   <img src="https://img.shields.io/badge/Project-Inception-blue?style=for-the-badge&logo=docker" />
-  <img src="https://img.shields.io/badge/Language-C++-00599C?style=for-the-badge&logo=c%2B%2B" />
+  <img src="https://img.shields.io/badge/Shell-Scripting-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" />
 </p>
 
 <p align="center">
-  <b>A comprehensive System Administration project at 42 Paris.</b><br>
-  Setting up a secure infrastructure with Nginx, MariaDB, and WordPress using Docker Compose.
+  <b>System Administration & Docker Orchestration at 42 Paris.</b><br>
+  Deploying a high-availability LEMP stack via custom Docker images on Debian Bullseye.
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
   <img src="https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white">
   <img src="https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white">
   <img src="https://img.shields.io/badge/WordPress-21759B?style=flat-square&logo=wordpress&logoColor=white">
