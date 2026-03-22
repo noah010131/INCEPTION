@@ -1,5 +1,31 @@
 *This project has been created as part of the 42 curriculum by chanypar.*
 
+<p align="center">
+  <a href="https://42.fr/en/homepage/" target="blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/42_Logo.svg" width="150" alt="42 Logo" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Campus-Paris-000000?style=for-the-badge&logo=target" />
+  <img src="https://img.shields.io/badge/Project-Inception-blue?style=for-the-badge&logo=docker" />
+  <img src="https://img.shields.io/badge/Language-C++-00599C?style=for-the-badge&logo=c%2B%2B" />
+</p>
+
+<p align="center">
+  <b>A comprehensive System Administration project at 42 Paris.</b><br>
+  Setting up a secure infrastructure with Nginx, MariaDB, and WordPress using Docker Compose.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white">
+  <img src="https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white">
+  <img src="https://img.shields.io/badge/WordPress-21759B?style=flat-square&logo=wordpress&logoColor=white">
+  <img src="https://img.shields.io/badge/Debian-A81D33?style=flat-square&logo=debian&logoColor=white">
+</p>
+
+---
+
 # Inception
 
 ## Description
