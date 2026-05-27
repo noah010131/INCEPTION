@@ -7,21 +7,23 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Campus-Paris-000000?style=for-the-badge&logo=target" />
-  <img src="https://img.shields.io/badge/Project-Inception-blue?style=for-the-badge&logo=docker" />
-  <img src="https://img.shields.io/badge/Shell-Scripting-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" />
+  <img src="https://img.shields.io/badge/Project-ft__transcendence-7952B3?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Architecture-Microservices-FF6F61?style=for-the-badge&logo=kubernetes&logoColor=white" />
 </p>
 
 <p align="center">
-  <b>System Administration & Docker Orchestration at 42 Paris.</b><br>
-  Deploying a high-availability LEMP stack via custom Docker images on Debian Bullseye.
+  <b>Final Core Curriculum Project: Real-Time Multi-Service Web Platform at 42 Paris.</b><br>
+  A high-performance collaborative single-page application featuring real-time pong gameplay, chats, and dynamic matchmaking.
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white">
+  <img src="https://img.shields.io/badge/Socket.io-010101?style=flat-square&logo=socketdotio&logoColor=white">
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white">
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white">
   <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
-  <img src="https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white">
-  <img src="https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white">
-  <img src="https://img.shields.io/badge/WordPress-21759B?style=flat-square&logo=wordpress&logoColor=white">
-  <img src="https://img.shields.io/badge/Debian-A81D33?style=flat-square&logo=debian&logoColor=white">
 </p>
 
 ---
